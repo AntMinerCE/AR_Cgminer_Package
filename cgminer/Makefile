@@ -66,12 +66,15 @@ define Package/cgminer/install
 
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/cgminer $(1)/usr/bin
 	$(INSTALL_BIN) $(FILES_DIR)/cgminer-monitor       $(1)/usr/bin
+	$(INSTALL_BIN) $(FILES_DIR)/pic-update.init       $(1)/etc/init.d/pic-update
 	$(INSTALL_BIN) $(FILES_DIR)/cgminer.init          $(1)/etc/init.d/cgminer
 
 ifeq ($(MINER_TYPE),S3++)
 	$(CP)          $(FILES_DIR)/cgminer_s3++.config     $(1)/etc/config/cgminer
 else
-	$(CP)          $(FILES_DIR)/cgminer.config     $(1)/etc/config/cgminer
+	$(CP)          $(FILES_DIR)/pic-update.config                     $(1)/etc/config/pic-update
+	$(CP)          $(FILES_DIR)/miner_pic_antMiner_S320150109.hex     $(1)/etc/config/miner_pic.hex
+	$(CP)          $(FILES_DIR)/cgminer.config                        $(1)/etc/config/cgminer
 endif
 
 ifeq ($(MINER_TYPE),S3)
