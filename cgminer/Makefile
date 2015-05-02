@@ -22,7 +22,7 @@ PKG_REV:=7a7e8f1eb242a9356a63c1db9b9e1706c561ad9d
 PKG_RELEASE:=1
 PKG_INSTALL:=1
 
-#PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-$(PKG_REV).tar.bz2
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-$(PKG_REV).tar.bz2
 #PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=git://github.com/jameshilliard/cgminer.git -b bitmain-s3
 PKG_SOURCE_PROTO:=git
