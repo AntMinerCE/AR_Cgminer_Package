@@ -73,6 +73,7 @@ define Package/cgminer/install
 ifeq ($(MINER_TYPE),S3++)
 	$(CP)          $(FILES_DIR)/cgminer_s3++.config     $(1)/etc/config/cgminer
 else
+    mkdir -p $(1)/usr/lib/lua/luci/model/cbi/cgminer
 	$(CP)          $(FILES_DIR)/pic-update.config                     $(1)/etc/config/pic-update
 	$(CP)          $(FILES_DIR)/miner_pic_antMiner_S320150109.hex     $(1)/etc/config/miner_pic.hex
 	$(CP)          $(FILES_DIR)/cgminer.config                        $(1)/etc/config/cgminer
