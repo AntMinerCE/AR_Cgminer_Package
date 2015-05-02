@@ -76,6 +76,9 @@ else
 	$(CP)          $(FILES_DIR)/pic-update.config                     $(1)/etc/config/pic-update
 	$(CP)          $(FILES_DIR)/miner_pic_antMiner_S320150109.hex     $(1)/etc/config/miner_pic.hex
 	$(CP)          $(FILES_DIR)/cgminer.config                        $(1)/etc/config/cgminer
+	$(CP)          $(FILES_DIR)/cgminer.lua                           $(1)/usr/lib/lua/luci/model/cbi/cgminer/cgminer.lua
+	$(CP)          $(FILES_DIR)/cgminerstatus.lua                     $(1)/usr/lib/lua/luci/model/cbi/cgminer/cgminerstatus.lua
+	$(CP)          $(FILES_DIR)/cgminer.lua.controller                $(1)/usr/lib/lua/luci/controller/cgminer.lua
 endif
 
 ifeq ($(MINER_TYPE),S3)
