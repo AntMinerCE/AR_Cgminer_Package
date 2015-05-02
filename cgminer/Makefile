@@ -66,6 +66,7 @@ define Package/cgminer/install
 
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/cgminer $(1)/usr/bin
 	$(INSTALL_BIN) $(FILES_DIR)/cgminer-monitor       $(1)/usr/bin
+	$(INSTALL_BIN) $(FILES_DIR)/pic-update            $(1)/usr/bin
 	$(INSTALL_BIN) $(FILES_DIR)/pic-update.init       $(1)/etc/init.d/pic-update
 	$(INSTALL_BIN) $(FILES_DIR)/cgminer.init          $(1)/etc/init.d/cgminer
 
